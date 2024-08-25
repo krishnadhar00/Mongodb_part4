@@ -1,0 +1,25 @@
+1. There is one website name as DB-engines where we search for which database is good. 
+2. There are so many paramters are there for seeing the ranking of database for choosing.
+3. DB-engines tells the popularity of all the database.
+
+How to choose a database?
+1. To consider a database for a product we have to consider a database on technical and non-technical criteria.
+Non Technical Criteria :
+    1. Querying interface : Every database provides different ways to query the data, for example sql in mysql or pgsql, more js object -like syntax in mongodb in elastic search. So based on the good querying interface choose the database.
+    2. Bulk Processing Support : how easy it is to import/export data or do processsing on multiple records together. OR It checks the backup of the data if database get crashed thenm data must be secured.
+
+Tchnical Criteria : 
+
+    3. Transactions : Any read and write operation perform on the database.
+    ACID PROERTIES :
+    A -> Atomicity : Either the transaction will be totally commited or it be totally rollback.(MYSQL acheives this using UNDO LOGS). UNDO means revert.
+    C -> Consistency : Before and After the transaction data must be consistent.(Double Write buffer).
+    I -> Isolation : If two or more transaction occurs simultaneously then all transaction are independent of each other. Transaction should occur independently. Eg. At the same time me and my friend is booking the same hostel and there s only one room available so these transaction are independent of each other. OR at the same time i';m sending the money to someone and recieving the money form someone so both are independent.
+    To acheive Isolation we have two mechanism. 1. Locks 2. Isolation levels : a)serializable b)read c) unread
+    D -> Durability : data should be safe and secured even if database get crashed.(MYSQL acheives this using REDO LOGS).
+
+    NOSQL : In case of NOSQL we use different acid property in compare of rdbms. It is relaxed version. We cannot follow the rdbms acid property and transaction very strictly. In NOSQL we talk about some relaxation.
+    A -> associative 
+    C -> commutative
+    I -> idempotent 
+    D -> distributed
